@@ -1,0 +1,110 @@
+<html>
+
+<script type="text/javascript">
+  window.onload = function loadItems() {
+    var text = localStorage.getItem('title');
+    var mainDiv = document.getElementById("main");
+    mainDiv.appendChild(buildItemDiv(text));
+  }
+
+  function buildItemDiv(text) {
+    var listElement = document.createElement("div");
+    listElement.setAttribute("class", "listElement");
+
+    var image = document.createElement("img");
+    image.setAttribute("class", "icon");
+    image.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png");
+
+    var textSpan = document.createElement("span");
+    textSpan.setAttribute("class", "text");
+    textSpan.innerHTML = text;
+
+    listElement.appendChild(image);
+    listElement.appendChild(textSpan);
+    
+    return listElement;
+  }
+</script>
+
+
+<style type="text/css">
+
+.okvir {
+  height: 500px;
+  width: 300px;
+  background-color: #F4717F;
+  background: linear-gradient(to bottom right, #F6B398, #F4717F);
+}
+
+.backIcon {
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  margin-right: 15px;
+}
+
+.addIcon {
+  height: 25px;
+  width: 25px;
+}
+
+.editIcon {
+  height: 25px;
+  width: 25px;
+}
+
+.navigation {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-familiy: Helvatica;
+  background-color: #F6B398;
+  border-bottom: 2px solid black;
+  overflow: hidden;
+}
+
+.plus {
+  float: right;
+  font-size: 45px;
+  margin: 10px;
+}
+
+.listElement {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin: 5px 5px;
+  font-family: Helvetica;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  border-right: 1px solid black;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+
+
+</style>
+
+<body>
+
+<div class="okvir">
+  <div class="navigation">
+     <a href="index.html"> <img class="backIcon" src="https://daks2k3a4ib2z.cloudfront.net/54d0240e4060e5c0183e0bd2/53a1fb4d41d34bac10930096_Icon-arrow-left.png"/> </a>
+     <a href="add_flash_card.html"> <img class="addIcon" src="http://www.iconsdb.com/icons/preview/white/plus-5-xxl.png"/> </a>
+     <img class="editIcon" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/White_pencil.png"/>
+  </div>
+  <div id="main" class="main">
+
+  </div>
+</div>
+
+</body>
+</html>

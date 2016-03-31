@@ -1,15 +1,89 @@
 <html>
+
+<style type="text/css">
+
+.okvir {
+  height: 500px;
+  width: 300px;
+  background-color: #F6F1ED;
+}
+
+button:focus {
+  outline:0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+
+.menuItem {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 28%;
+  width: 100%;
+  height: 25%;
+  font-size: 14px;
+  font-family: Helvetica;
+  border-bottom: 2px solid black;
+}
+
+.flashCards {
+  background-color: #F6B398;
+  background: linear-gradient(to bottom right, #F6B398, #F4717F);
+}
+
+.events {
+  background: linear-gradient(to bottom right, #F4717F, #C06C84);
+  background-color: #F4717F;
+}
+
+.notes {
+  background: linear-gradient(to bottom right, #C06C84, #6C5B7B);
+  background-color: #C06C84;
+}
+
+.settings {
+  background: linear-gradient(to bottom right, #6C5B7B, #365B7C);
+  background-color: #6C5B7B;
+}
+
+</style>
+
 <body>
 
-<div class='header'><h1>Home</h1></div>
-<div class='search-view'>
-<input class='search-key' type="text"/>
-<ul class='employee-list'></ul>
+<div class="okvir">
+  <a href="flash_cards.html">
+    <button class="flashCards menuItem">
+      <img class="icon" src="img/icon_flash_card.png"/> 
+      Flash Cards
+    </button>
+  </a>
+  <a>
+    <button class="events menuItem">
+      <img class="icon" src="http://dc.glocaleyz.com/public/landingpage/images/events-icon-white.png"/> 
+      Event Diary
+    </button>
+  </a>
+  <a>
+    <button class="notes menuItem">
+      <img class="icon" src="http://www.iconsdb.com/icons/preview/white/note-2-xxl.png"/> 
+      Notes
+    </button>
+  </a>
+  <a>
+    <button class="settings menuItem">
+      <img class="icon" src="http://www.iconsdb.com/icons/preview/white/settings-17-xxl.png"/> 
+      Settings
+    </button>
+  </a>
 </div>
-
-<script src="lib/jquery-1.8.2.min.js"></script>
-<script src="js/storage/memory-store.js"></script>
-<script src="js/main.js"></script>
 
 </body>
 </html>
